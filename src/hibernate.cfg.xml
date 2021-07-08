@@ -31,6 +31,7 @@
 
 		<!-- Mapping files -->
 		<mapping resource="user.hbm.xml" />
+		<mapping resource="address.hbm.xml" />
 
 	</session-factory>
 </hibernate-configuration>
