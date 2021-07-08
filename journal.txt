@@ -1,0 +1,11 @@
+LOG / Journal:
+
+added: 
+		<property name="hibernate.enable_lazy_load_no_trans">true</property>
+in cfg.xml file
+after error
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.test.db.model.User.addresses, could not initialize proxy - no Session
+
+had to delete the db and re run, this time the process keeps running and does not stop
+
+had to end up using the printAllUsers method in the DAO surrounded by transaction and try catch

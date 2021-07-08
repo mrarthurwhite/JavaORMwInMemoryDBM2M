@@ -31,7 +31,7 @@ public class User {
 	@Override
 	public String toString() {
 		String user= "User [userid=" + userid + ", firstName=" + firstName+  "]\n";
-		return user + allAddresses();
+		return user;
 	}
 	
 	

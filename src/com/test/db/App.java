@@ -23,9 +23,7 @@ public class App {
 		userDao.addUser(user);
 
 		// Get all users
-		for (User u : userDao.getAllUsers()) {
-			System.out.println(u);
-		}
+		 userDao.printAllUsers();
 
 	}
 }
