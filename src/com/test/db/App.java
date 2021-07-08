@@ -14,7 +14,7 @@ public class App {
 		User user = new User();
 			user.setFirstName("Arthur");
 		// Create addresses
-		Set<Address> addresses = new HashSet<Address>();
+			Set<Address> addresses = new HashSet<Address>();
 			addresses.add(new Address("1 Prosperity Lane, Bergen, Norway"));
 			addresses.add(new Address("1 Success Dr, London, UK"));
 			addresses.add(new Address("1 Victory Lane, Zurich, Switzerland"));
@@ -26,7 +26,6 @@ public class App {
 		for (User u : userDao.getAllUsers()) {
 			System.out.println(u);
 		}
-		// Get user by id
-		//System.out.println(dao.getUserById(2));
+
 	}
 }

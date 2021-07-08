@@ -4,12 +4,17 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.test.db.model.User" table="users">
+	<class name="com.test.db.model.User" table="USERS">
 		<id name="userid" type="int" column="userid">
 			<generator class="increment" />
 		</id>
 		<property name="firstName">
 			<column name="firstname" />
 		</property>
+		
+		<set name="addresses" table="USER_ADDRESS" cascade="all">
+            <key column="USER_ID" />
+            <many-to-many column="ADDRESS_ID"  class="com.test.db.model.Address" />
+        </set>
 	</class>
 </hibernate-mapping>
