@@ -1,4 +1,4 @@
-This illustrates a many to many relationship between entities using Hibernate & an inmemory DB
+This illustrates a many to many relationship between entities using Hibernate & an in-memory DB
 
 The following is the schema of the DB:
 USER <->> USER_ADDRESS<<-> ADDRESS
