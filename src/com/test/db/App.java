@@ -1,21 +1,29 @@
 package com.test.db;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import com.test.db.dao.UserDao;
 import com.test.db.model.User;
+import com.test.db.model.Address;
 public class App {
 
 	public static void main(String[] args) {
-		UserDao dao = new UserDao();
-		// Add new user
-		/*User user = new User();
-		user.setFirstName("Arthur");
-		dao.addUser(user);
-		// Update user
-		user.setFirstName("Arthur White");
-		dao.updateUser(user);*/
-		// Delete user// dao.deleteUser(1);
+		UserDao userDao = new UserDao();
+		// Create new user
+		User user = new User();
+			user.setFirstName("Arthur");
+		// Create addresses
+		Set<Address> addresses = new HashSet<Address>();
+			addresses.add(new Address("1 Prosperity Lane, Bergen, Norway"));
+			addresses.add(new Address("1 Success Dr, London, UK"));
+			addresses.add(new Address("1 Victory Lane, Zurich, Switzerland"));
+		user.setAddresses(addresses);
+		// add the user to the DB
+		userDao.addUser(user);
+
 		// Get all users
-		for (User u : dao.getAllUsers()) {
+		for (User u : userDao.getAllUsers()) {
 			System.out.println(u);
 		}
 		// Get user by id
